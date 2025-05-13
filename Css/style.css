@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
+/* header */
+header{
+    background-color: rgb(45, 46, 46);
+    padding: 1.4rem;
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+}
+/* Principal */
+.img-main{
+    background-image: url(../img/R.jfif);
+    background-size: cover; /* Ajusta la imagen para cubrir el área sin distorsionarse */
+    background-position: center; /* Centra la imagen */
+    color: white; /* Cambia el color del texto si es necesario */
+    display: grid; 
+    grid-template-columns: 1.3fr 0.7fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas:  ". ."; 
+}
+.texto_main { 
+    margin: 7rem;
+}
+    .texto1_main{
+        font-size: 5rem;
+        margin-bottom: 15vmin;
+        font-weight: 800;
+        text-shadow: 0px 0px 5px rgb(167, 166, 165);
+    }
+    .texto2_main{
+        font-size: 1.8rem;
+    }
+.boton_main { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .boton{
+        background-color: rgb(199, 199, 199);
+        padding: 2rem;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: larger;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .boton:hover{
+        box-shadow: 0px 0px 5px whitesmoke;
+        transform: scale(1.04);
+    }
+@media screen and (max-width: 1010px){
+.texto_main { 
+    margin: 3rem;
+}    
+    .texto1_main{
+        font-size: 3rem;
+        margin-bottom: 10vmin;
+    }
+    .texto2_main{
+        font-size: 1.4rem;
+    }
+.boton_main { 
+    display: flex;
+}
+    .boton{
+        background-color: rgb(199, 199, 199);
+        padding: 1.5rem;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+.img-main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.texto_main { 
+    margin: 2.3rem;
+}
+    .texto1_main{
+        font-size: 2.5rem;
+        margin-bottom: 10vmin;
+    }
+.boton_main { 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+    .boton{
+        padding: 1rem;
+    }
+
+}
