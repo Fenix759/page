@@ -102,3 +102,11 @@ header{
     }
 
 }
+/* Cartas */
+
+.caja_cartas{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
