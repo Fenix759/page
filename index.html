@@ -5,66 +5,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
     <!-- header -->
     <header>
-        <div>
-            <p>Tu Sinfonia</p>
+        <div class="text_header">
+            Tu Sinfonia
         </div>
-        <div>
-            <!-- Futuros botones -->
+        <div class="text_header2">
+            <div class="header_a"><a href="#">Cursos</a></div>
+            <div class="header_a"><a href="#">Contactanos</a></div>
+            
+    
+            <button type="button" class="btn btn-dark">Inicia Sesion</button>
         </div>
     </header>
 
+    
     <!-- Principal -->
-    <main style="margin-bottom: 30px;">
+    <main style="margin-bottom: 30px;" >
     <div class="img-main">
         <div class="texto_main">
             <div class="texto1_main">Bienvenido a Tu sinfonia</div>
-            <div class="texto2_main">Aqui podras encontrar distintos cursos con instructores calificados
-                para que puedas incrementar tu inteligencia musical en el instrumuneto que desees
+            <div class="texto2_main"><p>Aquí podrás encontrar una amplia variedad de cursos diseñados
+                para potenciar tu crecimiento musical. Contamos con instructores altamente
+                calificados que te guiarán en cada paso del aprendizaje, brindándote las
+                herramientas necesarias para desarrollar tu inteligencia musical en el
+                instrumento que elijas. Ya sea que estés comenzando desde cero o busques
+                perfeccionar tus habilidades, aquí encontrarás el apoyo y la formación
+                adecuados para alcanzar tus metas.</p>
             </div>
         </div>
         <div class="boton_main">
-            <div class="boton"> > inscríbete ya < </div>
+
+            <!-- Button trigger modal -->
+                <button type="button" class="btn boton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                > Registrate ya <
+                </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: 600;">Registrate</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn boton2">Registrarse</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
         </div>
-    </div>
+    </div>  
     </main>
     <!-- Cartas -->
-    <div>
-        <div class="caja_cartas">
-            <div class="card" style="display: flex;align-content: center;text-align: center; width: 25rem;box-shadow: 0px 0px 5px ;  ">
-                <img src="img/Guitarra.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-weight: 600;">Guitarra</h5>
-                    <hr>
-                    <p class="card-text">En este curso aprenderas de los diferentes tipos de acordes y a como ejecutarlos .</p>
-                    <a href="#" class="btn btn-primary" style="font-weight: 600;"> >> Inscribete << </a>
-                </div>
-            </div>
-            <div class="card" style="display: flex;align-content: center;text-align: center; width: 25rem;box-shadow: 0px 0px 5px ;  ">
-                <img src="img/Piano.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-weight: 600;">Piano</h5>
-                    <hr>
-                    <p class="card-text">En este curso podras aprender a poder interpretar partituras y a tocar varias sinfonias conocidas</p>
-                    <a href="#" class="btn btn-primary" style="font-weight: 600;"> >> inscribete << </a>
-                </div>
-            </div>
-            <div class="card" style="display: flex;align-content: center;text-align: center; width: 25rem;box-shadow: 0px 0px 5px ;  ">
-                <img src="img/bateria.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-weight: 600;">Bateria</h5>
-                    <hr>
-                    <p class="card-text">En este curso podras aprender desde los ritmos mas simples a los mas complejos</p>
-                    <a href="#" class="btn btn-primary" style="font-weight: 600;"> >> inscribete <<</a>
+     
+    <div class="caja_cartas">
+
+        <div class="carta">
+            <div class="card" style="max-width: 580px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/Guitarra.png" class="card-img-top img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">Guitarra</h3>
+                        <p class="card-text">En este curso aprenderas de los diferentes tipos de acordes y a como ejecutarlos</p>
+                        <a href="#" class="btn btn-outline-primary" style="font-weight: 600;"> >> Inscribete << </a>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="carta">
+            <div class="card" style="max-width: 580px; padding: -1rem;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/Piano.jpg" class="card-img-top img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">Piano</h3>
+                        <p class="card-text">En este curso podras aprender a poder interpretar partituras y a tocar varias sinfonias conocidas</p>
+                        <a href="#" class="btn btn-outline-primary" style="font-weight: 600;"> >> Inscribete << </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carta">
+            <div class="card" style="max-width: 580px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/bateria.webp" class="card-img-top img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">Bateria</h3>
+                        <p class="card-text">En este curso encontraras la oportunidad de aprender desde los ritmos mas simples a los mas complejos</p>
+                        <a href="#" class="btn btn-outline-primary" style="font-weight: 600;"> >> Inscribete << </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <div class="card" style="max-width: 580px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/Flauta.jfif" class="card-img-top img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">Flauta</h3>
+                        <p class="card-text">En este curso aprenderás técnicas de ejecución que te permitirán interpretar melodías con mayor expresividad</p>
+                        <a href="#" class="btn btn-outline-primary" style="font-weight: 600;"> >> Inscribete << </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <div class="card" style="max-width: 580px; padding: -1rem;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/Trompeta.webp" class="card-img-top img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">Trompeta</h3>
+                        <p class="card-text">En este curso Aprenderás técnicas de digitación y embocadura para lograr interpretaciones más dinámicas</p>
+                        <a href="#" class="btn btn-outline-primary" style="font-weight: 600;"> >> Inscribete << </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carta">
+            <div class="card" style="max-width: 580px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/Acordeon.jfif" class="card-img-top img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">Acordeon</h3>
+                        <p class="card-text">En este curso dominarás progresiones armónicas que enriquecerán tu interpretación y tu repertorio musical</p>
+                        <a href="#" class="btn btn-outline-primary" style="font-weight: 600;"> >> Inscribete << </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-
+    <!-- Footer -->
+     <footer>
+        <div class="footer">
+            <div class="linea_footer"></div>
+            <div class="icono">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-twitter-x"></i>
+                <i class="bi bi-instagram"></i>
+            </div>
+            <div class="linea_footer"></div>
+        </div>
+        <div class="footer_text">Tu Sinfonia</div>
+        <div class="footer_text2"> &copy; 2025 Tu Sinfonia. Todos los derechos reservados.</div>
+    </footer>
+        
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
 </html>

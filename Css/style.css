@@ -5,7 +5,9 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    
+}
+body{
+    background-color: rgba(207, 207, 207, 0.966);
 }
 /* header */
 header{
@@ -14,30 +16,71 @@ header{
     color: white;
     font-weight: 600;
     font-size: 2rem;
+    display: flex;
+    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+    justify-content: space-between;
 }
+.text_header{
+    font-size: 2.4rem;
+}
+.text_header2{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1rem;
+}
+a{
+    all: unset;
+    cursor: pointer;
+}
+.header_a{
+    display: block;
+}
+.btn-dark{
+    font-weight: 600;
+    padding: 1rem;
+}
+@media screen and (max-width: 650px){
+    header{
+        padding: 1.4rem;
+        display: flex;
+    }
+    .text_header{
+        font-size: 1.8rem;
+    }
+    .header_a{
+        display: none;
+    }
+    .btn-dark{
+        font-weight: 600;
+        padding: 0.5rem;
+    }
+}
+
 /* Principal */
 .img-main{
     background-image: url(../img/R.jfif);
     background-size: cover; /* Ajusta la imagen para cubrir el área sin distorsionarse */
-    background-position: center; /* Centra la imagen */
-    color: white; /* Cambia el color del texto si es necesario */
+    background-position: center;
+    color: white;
     display: grid; 
     grid-template-columns: 1.3fr 0.7fr; 
     grid-template-rows: 1fr; 
     gap: 0px 0px; 
     grid-template-areas:  ". ."; 
+    box-shadow: 1px 0px 4px rgb(0, 0, 0);
 }
 .texto_main { 
-    margin: 7rem;
+    margin: 6rem;
 }
     .texto1_main{
         font-size: 5rem;
         margin-bottom: 15vmin;
         font-weight: 800;
-        text-shadow: 0px 0px 5px rgb(167, 166, 165);
+        text-shadow: 0px 0px 5px rgb(119, 119, 119);
     }
     .texto2_main{
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 .boton_main { 
     display: flex;
@@ -45,17 +88,49 @@ header{
     align-items: center;
 }
     .boton{
-        background-color: rgb(199, 199, 199);
+        background-color: rgb(218, 218, 218);
         padding: 2rem;
         border-radius: 5px;
         font-weight: 600;
         font-size: larger;
         cursor: pointer;
         transition: transform 0.3s ease;
+        box-shadow: 0px 0px 2px whitesmoke;
+        color: white;
     }
     .boton:hover{
         box-shadow: 0px 0px 5px whitesmoke;
+        background-color: rgb(200, 200, 200);
         transform: scale(1.04);
+        text-shadow: 0px 0px 2px whitesmoke;
+    }
+    /* formulario */
+    .modal-header{
+        background-color: rgb(37, 37, 37);
+        color: aliceblue;
+    }
+    label{
+        font-weight: 600;
+    }
+    .btn-close{
+        background-color: rgb(255, 255, 255);
+    }
+    .boton2{
+        background-color: rgb(218, 218, 218);
+        font-weight: 600;
+        font-size: larger;
+        transition: transform 0.3s ease;
+        box-shadow: 0px 0px 2px whitesmoke;
+        color: white;
+        transition: transform 0.3s ease;
+    }
+    .boton2:hover{
+        background-color: rgb(195, 195, 195);
+        color: white;
+        transform: scale(1.05);
+    }
+    .modal-footer{
+        background-color: rgb(37, 37, 37);
     }
 @media screen and (max-width: 1010px){
 .texto_main { 
@@ -99,14 +174,134 @@ header{
 }
     .boton{
         padding: 1rem;
+        margin-bottom: 3.4rem;
     }
-
 }
 /* Cartas */
 
 .caja_cartas{
-    padding: 2rem;
     display: flex;
+    justify-content: center;
+    text-align: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
+    margin: 2rem;
     flex-wrap: wrap;
+    gap: 25px;
+}
+    .card{
+        padding: 1.5rem;
+        background-color: rgb(252, 251, 251);
+        border-radius: 15px;
+        box-shadow: 0px 0px 2px rgb(155, 155, 155);
+    }
+    .img{
+        padding: 1rem;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        width: 176px;
+        box-shadow: 0px 0px 4px gainsboro;
+        transition: transform 0.6s ease;
+    }
+    .img:hover{
+        transform: scale(1.08);
+    }
+    .card-body > p,h3 {
+        font-weight: 600;
+    }
+    .btn-outline-primary{
+        background-color: rgb(242, 242, 242);
+    }
+
+
+@media screen and (max-width: 1240px){
+    .caja_cartas{
+        justify-content: center;
+        gap: 2rem;
+    }
+    img{
+        padding: 1rem;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        width: 170px;
+    }
+    .card-body > p,h3 {
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .card{
+        padding-right: none;
+        padding-left: none;
+    }
+}
+
+/* footer */
+footer{
+    background-color: rgb(45, 46, 46);
+    color: aliceblue;
+    padding: 4.5rem;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0);
+    padding-bottom: 2rem;
+}
+    .footer{
+        display: flex; 
+        justify-content: space-between;
+    }
+    .linea_footer{
+        background-color: rgb(255, 255, 255);
+        padding-right: 30%;
+        margin: 1.1rem;
+    }
+
+    .icono{
+        font-size: 2rem;
+        gap: 3rem;
+        display: flex;
+    }
+    .bi{
+        cursor: pointer;
+    }
+.footer_text{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+    margin-top: 3rem;
+}
+.footer_text2{
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px){
+    footer{
+            padding: 3rem;
+    }
+    .linea_footer{
+        background-color: rgb(255, 255, 255);
+        padding-right: 15%;
+        margin: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .linea_footer{
+        display: none;
+    }
+    .footer{
+        justify-content: center;
+    }
+    .icono{
+        font-size: 2rem;
+        gap: 3rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .icono{
+        border-bottom: 2px solid white;
+        padding-bottom: 3rem;
+    }
 }
